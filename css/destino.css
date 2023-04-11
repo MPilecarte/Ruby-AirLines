@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body{
+    background-color: #F8EEE3;
+    height: 100%; 
+    font-family: 'Quicksand', sans-serif;
+}
+/* Cabeçalho inicio */
+nav ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;    
+    background-color: #b30006;
+    margin-bottom: 45px;
+}
+ul li{
+    list-style: none;
+}
+nav a{
+    display: block;
+    position: relative;
+    cursor: pointer;
+    color: #F8EEE3;
+    font-weight: 800;
+    font-size: 1.3rem;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav a::after{
+    content: " ";
+    position: absolute;
+    width: 0%;
+    height: 1px;
+    background-color: #ffffff;
+    bottom: -1px;
+    left: 0;
+}
+nav a:hover::after{
+    width: 100%;
+}
+img.logo{
+    width: 80px;
+    height: 40px;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+}
+/* Cabeçalho fim */
+
+/* /////////////////////////////////////////////// */
+
+/* Conteudo principal inicio */
+
+/* Fist section   */
+main{
+    text-align: center;
+}
+main .conteudo-principal{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 20px 20px 0 0 ;
+    margin-bottom: 50px ;
+    margin-top: 20px;
+}
+h1{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.2rem ;
+    padding: 20px 0px 20px 0;
+}
+.destinos{
+    margin: 20px 20px;
+}
+.local1, .local2, 
+.local3, .local4, .pacote-secreto{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 30px;
+    background-color: #F8EEE3;
+    border-radius: 30px;
+    gap: 15px;
+    position: relative;
+    box-shadow: .5px 2px 1px 1px rgba(0, 0, 0, 0.199);
+}
+.local1:hover, .local2:hover, 
+.local3:hover, .local4:hover, .pacote-secreto:hover{
+    transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+    transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+    cursor: pointer;
+}
+.secret{
+    background-color: rgba(255, 255, 255, 0.514);
+}
+.pacote-secreto{
+    position: relative;
+}
+.pacote-secreto-text{
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    opacity: 0;
+}
+.pacote-secreto:hover{
+    opacity: 0.6;
+}
+.pacote-secreto-text:hover{
+    opacity: 1;
+    color: #b30006;
+
+}
+.fa-star{
+    color: #eeb422;
+    font-size: 15px;
+    margin-left: 12px;
+}
+.img-local{
+    border-radius: 30px 0 0 30px;
+}
+h2#pacote{
+    font-size: 1.8rem;
+    font:  600;
+    margin-top: 10px;
+}
+.preco{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 80px 60px 0 60px;
+    border: 5px solid #F8EEE3;
+    border-radius: 0 30px 30px 0;
+    background-color: #fff;
+    height: 100%;
+    font-size: 1.9rem;
+    font-weight: 800;
+    font-family: 'Ubuntu', sans-serif;
+}
+.oferta{
+    margin-top: 20px;
+    opacity: 0.8;
+    background-color: #b30006;
+    color: #F8EEE3;
+    font-size: 1rem;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.oferta:hover{
+    opacity: 1;
+    background-color: #940106;
+    cursor: pointer;
+}
+.avaliacao{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left:270px;
+    top: 100px;
+    gap: 20px;
+}
+#avl{
+    width: 50px;
+    height: 30px;
+    background-color: #b30006;
+    color: #fff;
+    padding-top: 5px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+p#servico{
+    position: absolute;
+    bottom: 40px;
+    left:270px;
+}
+p{
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+
+/* /////////////////////////////////////////////// */
+
+/* Second section */
+.hospedagem{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    padding: 130px 0 130px 0;
+    border-radius: 20px;
+    background-color: #fff;
+    border-radius: 20px 20px 0 0;
+    margin-bottom: -14px;
+}
+.titulo-e-subtitulo{
+    margin:0 20px 100px 50px;
+    text-align: justify;
+    font-family: 'Ubuntu', sans-serif;
+}
+#titulo-hospedagem{
+    margin-bottom: 12px;
+    margin-left: 20px;
+    font-size: 2rem;
+}
+#subtitulo-hospedagem{
+    opacity: 0.6;
+    margin-left: 20px;
+}
+#img-wolrd{
+    height: 300px;
+}
+
+.hotel1, .hotel2, .hotel3,
+.hotel4, .hotel5, .hotel6{
+    width: 252px;
+    height: 400px;
+    text-align: justify;
+    background-color: #ffffff;
+    border-radius: 20px;
+}
+.hotel1:hover, .hotel2:hover, .hotel3:hover, 
+.hotel4:hover, .hotel5:hover, .hotel6:hover{
+    border: 2px solid  #1E4558;;
+    transition: 1s ease;
+}
+.img-hotel{
+    border-radius: 20px 20px 0 0 ;
+}
+.nome-local{
+    font-size: 1.6rem;
+    margin: 12px 0 12px 12px;
+}
+.nome-hotel{
+    padding-bottom: 20px;
+    margin: 12px 0 12px 12px;
+}
+.hotel1 p, .hotel2 p, .hotel3 p,
+.hotel4 p, .hotel5 p, .hotel6 p{
+    margin: 10px 0 5px 12px;
+}
+
+
+.swiper{
+    width: 70vw;
+    height: 60vh;
+    margin-right: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.swiper-button-next{
+    padding-left: 30px;
+    margin-top: 10px;
+    color: #940106;
+}
+.swiper-button-prev{
+    padding-right: 30px;
+    margin-top: 20px;
+    color: #940106;
+}
+.swiper-slide{
+    margin-left: 40px;
+    height: 100%;
+    box-shadow: 0 0 2em #6900043a;
+
+}
+
+/* Conteudo principal fim */
+
+/* /////////////////////////////////////////////// */
+
+/* Rodapé inicio */
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #1E4558;
+    border-radius: 30px 30px 0 0 ;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    gap:32px;
+
+    box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.199);
+/* shadow para direita, baixo, cima,esquerda */
+}
+.icon-footer{
+    display: flex;
+    flex-direction: row;
+}
+.item-footer{
+    height: 30px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 15px;
+    opacity: 0.6;
+    cursor: pointer;
+}
+.item-footer:hover{
+    opacity: 1;
+}
+footer p{
+    color: #fff;
+    font-weight: 300;
+}
+.text-footer{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.753);
+}
+
+
+/* Rodapé fim */

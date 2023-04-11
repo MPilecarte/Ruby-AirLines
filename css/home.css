@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F8EEE3;
+    height: 100%;   /*Sempre que quiser usar porcentagem na altura, colocar o elemento pai com uma altura de 100%*/
+    font-family: 'Quicksand', sans-serif;
+    /* width:90%;margin: 0 auto;
+    min-width:600px;
+    max-width:2000px */
+}
+
+/* Menu inicio */
+nav{
+    width: 0;
+    height: 100%;
+    background: #F8EEE3;
+    padding: 50px 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1 ; /*A propriedade z-index indica que essa elemento irá sobrepor os outros elementos*/
+    overflow: hidden; /*quando um elemento filho não tiver mais espaço dentro desse elemento ele não ficará visivel*/
+    transition: width 0.3s ease;
+}
+nav a{ 
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.3rem;
+    padding: 12px 10px 12px 32px;
+    color: #000;
+}
+nav a:hover{
+    background-color:#b30006;
+    color: #F8EEE3;
+    border-radius: 30px 0 0 30px;
+}
+.icon-login{
+    margin-top: 50px;
+    margin-left: 44%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+#btn-fechar{
+    font-size: 50px;
+    right: 250px;
+    top: 0;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    position: absolute;
+    z-index: 2;
+    color: #000;
+}
+#nav-botao-hamburguer{
+    display: flex;
+    background-color:#b30006;
+    border:transparent;
+    border-radius: 100%; 
+    padding: 5px 10px 5px 10px;
+    color: #F8EEE3;
+    font-weight: 500;
+    font-size: 1.8rem;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    z-index: 2;
+}
+/* Menu fim */
+
+
+
+/* Cabeçalho inicio */
+header{
+    background-image: url(../img/img_home/curvy-rocks-of-grand-canyon.jpg);
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 50vh;
+    width: 100%;
+}
+
+img.logo{
+    width: 80px;
+    height: 40px;
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+/* Campo de pesquisa inicio */
+.busca{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 75%;
+    left: 30%;
+}
+#btn-search{
+    width: 10rem;
+    height: 50px;
+    border: none;
+    border-radius: 0 30px 30px 0 ;
+    background-color: #b30006;
+    color: #F8EEE3;
+}
+#btn-search:hover{
+    background-color: #6e0004;
+}
+input[type="text"]{
+    width: 30rem;
+    height: 50px;
+    font-size: 20px;
+    padding-left: 8px;
+    border: none;
+    border-radius: 30px  0 0 30px;
+}
+/* Campo de pesquisa fim */
+/* Cabeçalho fim */
+
+/* /////////////////////////////////////////////// */
+
+/* Corpo  inicio */
+/* Section 1 inicio */
+main{
+    text-align: center;
+    transition: margin-right 0.5s;
+}
+#main-tittle1{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.7rem;
+}
+#main-content-card{
+    margin-top: 20px;
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+/* Animação Card inicio*/
+.img-card-york{
+    height: 100%;
+}
+.img-card-paris{
+    height: 100vh;
+    width: 150vw;
+    margin-left: 1px;
+}
+.card{  
+    width: 300px;
+    height: 400px;
+    background: #000;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .25s ease;
+    backface-visibility: hidden;
+    margin-bottom: 100px;
+}
+
+.card:hover{
+    transform: scale(1.2);
+    /* ou transform: scale(.9); */
+}
+.card:hover:after{
+    height: 280px;
+}
+.card:hover .cont-text p{
+   margin-bottom: 0px;
+   opacity: 1;
+}
+.card:hover img{
+    transform: scale(1.25);
+}
+.card:after{
+    width: 100%;
+    content: " ";
+    left: 0px;
+    bottom: 0px;
+    height: 150px;
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+    z-index: 20;
+    transition: all .25s ease;
+}
+.card img{
+    height: 100%;
+    z-index: 10;
+    transition: all .25s ease;
+}
+
+
+@media(max-width: 1347px) {
+    .section-icons{
+        display: inline-flex;
+        margin-top: 100px;
+    }
+    .card{  
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        height: 350px;
+    }
+    .card .cont-text {
+        z-index: 15;
+        position: absolute;
+        padding: 10px;
+        padding-bottom:15px ;
+    }
+    .card .cont-text p{
+        font-size: .2rem;
+    }
+}
+/* Animação Card fim */
+
+
+/* Animação texto inicio */
+.card .cont-text {
+    text-align: start;
+    z-index: 30;
+    position: absolute;
+    bottom: 0px;
+    color: #fff;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.247);
+    font-weight: 500;
+    padding: 20px;
+    padding-bottom:30px ;
+}
+.card .cont-text p{
+    font-size: .8rem;
+    opacity: 0;
+    margin-bottom: -170px;
+    transition: all .25s  ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    font-weight: 500;
+}
+.card .cont-text:hover{
+    backdrop-filter: blur(2px);
+}
+.card .cont-text p, .btn-card{
+    padding: 7px 17px;
+    border-radius: 12px;
+    background: transparent;
+    border: .1px solid #fff;
+    color: #fff;
+    margin-top: 10px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: all .25s ease;
+    font-size: .75rem;
+    outline: none;
+}
+.card .cont-text .btn-card:hover{
+    background-color: #fff;
+    color: #970606;
+    font-weight: 1000;
+} 
+
+
+@media (max-width:1347px ){
+    .main-tittle1{
+        margin-top: 80px;
+        font-size: 3rem;
+        font-weight: 600;
+        margin-bottom: -20px;
+    }
+}
+/* Section 2 fim */
+
+/* Section 2 inicio */
+#main-tittle2{
+    margin-top: 70px;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#main-subtittle2{
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    color: #1E4558;
+    font-weight: 400;
+}
+.section-icons{
+    display: inline-flex;
+    margin-bottom: 100px;
+}
+.item-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #b30006;
+    color: #fff;
+    height: 180px;
+    width: 180px;
+    margin-left: 15px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.3);
+}
+.icon-main{
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+/* Section 2 fim */
+
+/* /////////////////////////////////////////////// */
+
+
+/* Section 3 inicio */
+
+#main-tittle3{
+    margin-top: 10px;
+    font-size: 1.9rem;
+    margin-bottom: 150px;
+    margin-top: 150px;
+}
+.servicos{
+    background-color: #b30006;
+    display: flex;
+    text-align: center;
+    padding: 50px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 150px;
+    color: #fff;
+    margin-bottom: 100px;
+}
+.fundo1, .fundo2, .fundo3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #F8EEE3;
+    border-radius: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.feedback {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+.p1, 
+.p2, .p3{
+    width: 300px;
+    height: 250px;  
+    text-align: justify;
+}
+#see-more{
+    margin-top: 60px;
+    width: 100px;
+    height: 50px;
+    background-color: #b30006;
+    color: #F8EEE3;
+    font-weight: 600;
+    border-radius: 25px;
+    border: transparent;
+}
+#see-more:hover{
+    color: #b30006;
+    background-color: #F8EEE3;
+    border: 1px solid #b30006;
+}
+/* Section 3 fim */
+/*Corpo fim */
+/* /////////////////////////////////////////////// */
+/* Rodapé inicio */
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #1E4558;
+    border-radius: 30px 30px 0 0 ;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    gap:32px;
+    margin-top: 50px;
+}
+.icon-footer{
+    display: flex;
+    flex-direction: row;
+}
+.item-footer{
+    height: 30px;
+    color: #fff;
+    margin-top: 50px;
+    margin-left: 15px;
+    opacity: 0.6;
+}
+.item-footer:hover{
+    opacity: 1;
+}
+footer p{
+    color: #fff;
+    font-weight: 300;
+}
+.text-footer{
+    font-size: 1rem;
+    color: rgba(0, 0, 0, 0.753);
+}
+/* Rodapé fim */

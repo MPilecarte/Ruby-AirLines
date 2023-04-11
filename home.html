@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--------Links dda bliblioteca AOS------>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+    <!-------Link p/do diretório css------>
+    <link rel="stylesheet" href="css/home.css">
+    <!--------Link do font-awesome---------->
+    <link rel="stylesheet" href="icons/font-awesome/fontawesome-free-6.0.0-web/css/all.min.css" />
+    <!--------Link p/diretorio script------->
+    <script type="text/javascript" src="js/home.js" defer></script>
+    <link rel="icon" type="imagem/png" href="/logo/logo.1.2.png" />
+    <title>Ruby Airlines - Home</title>
+</head>
+<body>
+    <header>
+        <img class="logo" src="logo/logo.1.2.png">
+        <div class="menu">
+            <button id="nav-botao-hamburguer" onclick="abrirMenu()">&#9776</button>
+        </div>
+        <div class="busca">
+            <input type="text" id="search" placeholder="Busque um destino">
+            <button id="btn-search">Buscar</button>
+        </div>
+    </header>
+    
+    <nav id="nav" > 
+        <div id="nav-menu" class="menu-lateral">
+            <button id="btn-fechar" onclick="fecharMenu()">&times;</button>
+            <svg class="icon-login" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M224 256c70.7 0 128-57.31 128-128s-57.3-128-128-128C153.3 0 96 57.31 96 128S153.3 256 224 256zM274.7 304H173.3C77.61 304 0 381.6 0 477.3c0 19.14 15.52 34.67 34.66 34.67h378.7C432.5 512 448 496.5 448 477.3C448 381.6 370.4 304 274.7 304z"/></svg>
+            <a href="formulario.html" target="_blank">Login</a>
+            <a href="destinos.html" target="_blank">Destinos</a>
+            <a href="">Sobre nós</a>
+        </div>
+        
+    </nav>
+    
+    <main > 
+        <h2 id="main-tittle1">Venha conhecer</h2><br>
+        <section id="main-content-card" data-aos="fade-left">
+            <div class="card">
+                <img class="img-card-york" src="img/img_home/manhatan.jpg" >
+                <div class="cont-text">
+                    <div class="card-newyork">
+                        <h2>Nova York</h2>
+                        <p>Uma das cidades mais famosas do mundo. Para todos que procuram por diversão, compras e cultural, esse é o destino ideal! Dividida em cinco regiões: Bronx, Queens, Brooklyn, StatenIsland e Manhattan – a famosa ilha e parte mais rica da cidade - Nova York possui alguns dos pontos turísticos mais conhecidos do país, como a Estátua da Liberdade, o Central Park e a Times Square. 
+                        <button class="btn-card">Veja mais</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ----------------------------- -->
+            <div class="card">
+                <img class="img-card-paris" src="img/img_home/eiffel-tower-gc76ac561a_1920.jpg" alt="">
+                <div class="cont-text">
+                    <div class="card-paris">
+                        <h2>Paris</h2>
+                        <p>Um dos destinos mais românticos do mundo, Paris atrai muitos turistas por conta de seus museus, gastronomia ímpar, monumentos importantes e por todas as histórias que cercam a capital da França. Entre os cartões-postais mais importantes que você verá estão a Torre Eiffel, o Museu do Louvre, o Arco do Triunfo e a Catedral de Notre-Dame. 
+                        <button class="btn-card">Veja mais</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------------- -->
+            <div class="card">
+                <img src="img/img_home/bar-g3754a21ef_1920.jpg" alt="">
+                <div class="cont-text">
+                    <div class="card-seoul">
+                        <h2>Seoul</h2>
+                        <p>Uma cidade com mais de 2.000 anos de história que mistura a modernidade das  grandes cidades cosmopolitas com o tradicionalismo oriental. O que não falta na capital sul-coreana são arranha-céus, mas o turista que for para lá também poderá se esbaldar nos tranquilos parques da cidade, assim como nos seus templos budistas.
+                        <button class="btn-card">Veja mais</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- ----------------------------- -->
+            <div class="card">
+                <img src="img/img_home/istockphoto-985538892-612x612.jpg" alt="">
+                <div class="cont-text">
+                    <div class="card-lençois">
+                        <h2>Lençois Maranhenses</h2>
+                        <p>Um mar de lagoas cristalinas entre dunas de areias brancas. O Parque Nacional dos Lençóis Maranhenses forma um cenário único no mundo e é impossível não se admirar com a paisagem. Localizado no no noroeste do Maranhão e a 250 km da capital São Luís, os Lençóis atraem visitantes de todos os cantos, mas para que a experiência seja a melhor possível, é preciso ficar atento ao calendário.
+                        <button class="btn-card">Veja mais</button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 id="main-tittle2" >Por que escolher a Ruby Airlines</h2>
+        <p id="main-subtittle2">Aguns motivos para você escolher viajar conosco</p>
+        <section class="section-icons" data-aos="fade-right">
+            <div class="item-main">
+                <span class="fa-solid fa-award icon-main"></span>
+                Serviço de Qualidade
+                </div>
+            <div class="item-main">
+                <span class="fa-solid fa-headphones icon-main" aria-hidden="true"></span>
+                Suporte 24/7
+            </div>
+            <div class="item-main">
+                <span class="fa-solid fa-circle-dollar-to-slot icon-main" ></span>
+                Melhores Ofertas
+            </div>
+            <div class="item-main">
+                <span class="fa-solid fa-users icon-main"></span>
+                Pacote em grupo
+            </div>
+        </section>
+
+        <section class="servicos" >
+            <h2 id="main-tittle3">Nossos Serviços</h2>
+            <div class="fundo1" data-aos="fade-up"> 
+                <img src="icons/bed-solid.svg" width="80px" height="80px" >
+                <p>Acomodação</p>
+            </div>
+            <div class="fundo2" data-aos="fade-up"> 
+                <img src="icons/utensils-solid.svg" width="80px" height="80px"> 
+                <p>Comida</p>
+            </div>
+            <div class="fundo3" data-aos="fade-up"> 
+                <img src="icons/map-location-solid.svg" width="80px" height="80px"> 
+                <p>Diversão</p>
+            </div>
+        </section>
+
+        <p>Reserve sua viagem na Ruby e garanta as melhores tarifas em passagens aéreas, hotéis, pacotes de viagem, cruzeiros e aluguel de carro. Somos a maior agência de viagens online da América Latina presente em 21 países, dentre eles Argentina, Estados Unidos e Espanha. Contamos com a parceria de mais de 500 companhias aéreas e 150 mil hotéis em todo o mundo e, com isso, garantimos o melhor preço de viagem do Brasil. Ao comprar uma passagem aérea ou um pacote de viagem, os clientes da Ruby também garantem vantagens exclusivas, como descontos em restaurantes e lojas no destino escolhido, além de 10% de desconto em compras em nosso site. Confira nossas promoções e vantagens. Aproveite!</p><br><br>
+
+        <h2>Feedback's </h2>
+        <div class="feedback">
+            <div class="p1">
+                <img src="icons/woman.png" alt="">
+                <h3>Nome</h3>
+                <p> <i>Excelente serviço prestado pelo Diego, Samuel e os demais integrantes da equipe Ruby. Estiveram sempre a disposição para ajudar e tornar nossa viagem a melhor possível. Gabriella como guia local é ótima, sempre dando toques para ajudar no surf e garantindo que nos coloca sempre nos melhores picos, nas melhores horas. Já fiz viagens com outras empresas grandes e preferi o suporte da Ruby, um milhão de vezes. Próxima viagem será com eles!</i> </p>
+            </div>
+            <div class="p2">
+                <img src="icons/woman (1).png" alt="">
+                <h3>Nome</h3>
+                <p> <i>Melhor viagem! Realmente entendem bem do serviço que oferecem! Me ajudaram rapidamente sempre que precisei. Recomendo.</i> </p>                       
+            </div>
+            <div class="p3">
+                <img src="icons/girl.png" alt="">
+                <h3>Nome</h3>
+                <p> <i>A empresa é fantástica, está sempre presente e dá todo o suporte necessário. A viagem reuniu pessoas bem diferentes entre si que acabaram formando um grupo mágico, sempre apoiando um ao outro, estimulando o desenvolvimento do surf e aproveitando tudo isso com toneladas de diversão e alegria. Outro ponto positivo é de longe o melhor preço do mercado! Já estou planejando a próxima!Nada a reclamar, só gratidão mesmo!</i> </p>
+            </div>
+        </div>
+        <button id="see-more">Veja Mais</button>
+    </main>
+
+    <footer>
+        <div class="icons-footer">
+            <img class="item-footer" src="icons/instagram-brands.svg" fill="#fff">
+            <img class="item-footer" src="icons/facebook-f-brands.svg">
+            <img class="item-footer" src="icons/twitter-brands.svg">
+        </div>
+        <p>Copyright &copy; 2022 Design by Ruby Airlines</p>
+        <p class="text-footer">Since 2013, we have been offering travel services of the highest quality, combining our energy and enthusiasm.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(../img/rock-face-overlooking-a-forest.jpg);
+    background-repeat: no-repeat; /*não repetir a imagem de fundo*/
+    width: 100vw; /*vw(view width) unidade de medida por vizualização*/
+    height: 100vh;/*vh(view heigth)unidade de medida por vizualização*/
+    background-size: cover;
+}
+
+/*Cabeçalho*/
+header{
+    position: relative;
+}
+img.logo{
+    width: 70px;
+    height: 35px;
+    margin: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+nav{
+    width: 100%;/*largura do nav de 100% para que ele ocupe toda a largura da pagina*/
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0px 20px;
+    /*border: 1px red solid ;*/
+    /*border-bottom: 0.5px solid rgba(95, 35, 35, 0.3);*/
+}
+ul{
+    overflow: hidden;/*para a transição, usar o overflow:hidden para não mostrar a ul na tela */
+    padding: 0;
+    transition: 0.5s ease-in-out;    /*transição do efeito no menu com 0.5s e com um começo e fim lentos*/ 
+}
+.nav-item{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 140%;
+}
+
+
+/*efeito da linha debaixo dos itens do menu*/
+.nav-cabecalho a{
+    display: block;
+    position: relative;
+    padding-top: 13px;
+    cursor: pointer;
+    color: #000;
+}
+.nav-cabecalho a::after{
+    content: " ";
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background-color: #970606;
+    bottom: 0;
+    left: 0;
+    transition: 0.4s ease-in-out;
+}
+.nav-cabecalho a:hover::after{
+    width: 100%;
+}
+
+/*configuração do menu hambuguer*/
+.nav-botao-hamburguer{
+    background: transparent;
+    border: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.9rem;
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    display: none;
+}
+.nav-botao-hamburguer:focus ~ ul {
+    height: 250px;
+}
+
+@media (max-width: 900px){
+    nav ul{
+        flex-direction: column;
+        align-items: flex-start;
+        
+    }
+    ul{
+        text-align: center;
+        width: 100%;
+        background-color: #fff;
+        height: 0;
+    }
+    nav{
+        padding-top: 45px;
+        background-color: #fff;
+        padding-bottom: 5px;
+    }
+    .nav-botao-hamburguer{
+        display: flex;
+    }
+}
+
+/*///////////////////////////////////////////////*/
+
+/*Conteudo principal*/
+.conteudo {
+    padding: 30px;
+    align-items: center;
+    margin-top: 160px;
+    margin-bottom: 60px;
+    margin-left: 20px;
+    /*backdrop-filter: blur(2px);
+    width: 420px;
+    height: 200px;
+    border-radius: 12px;*/
+}
+
+.conteudo-escrito, .titulo, .subtitulo{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0px 1px 3px  rgba(0, 0, 0, 0.507);
+}
+.conteudo-entrada{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;    
+    margin-top: 22px;
+    position: relative;
+}
+
+section{
+    display: flex;
+    margin-top: 0.1rem;
+}
+input[type="email"]{
+    width: 390px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    border: 0.3px solid #57292941;
+}
+input[type="password"]{
+    width: 270px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    border: none;
+    border: 0.3px solid #57292941;
+}
+#botao{
+    width: 100px;
+    height: 37px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: #970606;
+    color: #fff;
+    font-weight: 300;
+    cursor: pointer;
+}
+#botao:hover{
+    background-color: #6e0404;
+    color: #fff;
+    font-weight: 300;
+}
+/*//////////////////////////////////////////////////*/
+
+/*Rodapé*/
+.rodape{
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+
+
+}
+
+.icone{
+    padding-right: 20px;
+    width: 30px;
+    height: 30px;
+}
